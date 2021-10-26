@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gofra_style.css') }}" />
+    <title>PacTech</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav_link" href="#">О нас</a>
+            <a class="nav_link" href="#">Продукция</a>
+            <a class="nav_link" href="#">Контакты</a>
+        </nav>
+    </header>
+    <div class="container_images">
+        <div class="intro">
+            <h1>IMAGES</h1>
+        </div>
+    </div>
+    <div class="container">
+        {% for i in range(3)%}
+        <div class="type_product">
+            <div class="product">
+                <h2 class="prod_name">Продукт</h2>
+                <p class="prod_info">Описание продукта</p>
+                <div class="prod_images"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
