@@ -17,17 +17,17 @@
         </nav>
     </header>
     <div class="container_images">
-        <div class="intro">
-            <h1>IMAGES</h1>
-        </div>
+        <div class="intro"></div>
     </div>
     <div class="container">
-        {% for i in range(3)%}
+        {% for i in data %}
         <div class="type_product">
             <div class="product">
-                <h2 class="prod_name">Продукт</h2>
-                <p class="prod_info">Описание продукта</p>
-                <div class="prod_images"></div>
+                <h2 class="prod_name">{{ i.prod }}</h2>
+                <p class="prod_info">{{ i.price }}</p>
+                <p class="prod_info">{{ i.desc }}</p>
+            <img class="prod_images" src='{{i.image_link}}'> 
+            <a class="btn" href="#">Подробней</a>
             </div>
         </div>
         {% endfor %}

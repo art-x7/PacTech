@@ -6,7 +6,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: rgb(224, 222, 222)
 }
 
 *, ::after, ::before {
@@ -51,7 +51,6 @@ p {
 .nav_link{
     padding-top: 0.5rem!important;
     padding-bottom: 0.5rem!important;
-    display: none!important;
     display: inline-block!important;
     text-decoration: none;
     color: #8e8e8e;
@@ -61,20 +60,21 @@ p {
 /* INTRO */
 .container_images {
     margin: 1rem!important;
+    position: relative;
 }
-
 
 .intro{
     width:100%;
-    height: 300px;
-    background: url(../images/intro2.jpg) center no-repeat;
+    height: 350px;
+    background: url(../images/intro.png) center no-repeat;
+    -webkit-background-size:cover;
     background-size:cover;
-    text-align:justify;
-    color: #fff
+    color: #fff;
+    border-radius: 0.3rem;
+    
 }
 
 /* PRODUCT */
-
 .container{
     margin-top: 1rem!important;
     margin-bottom: 1rem!important;
@@ -82,20 +82,18 @@ p {
     width: 100%!important;
     padding-left: 1rem!important;
     flex-wrap: wrap;
-    display: flex;
 }
-
 
 .type_product{
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
-    height: 400px;
+    background-color: #fff;
     padding-right: 3rem!important;
     padding-left: 3rem!important;
     text-align: center!important;
     margin-right: 1rem!important;
     margin-bottom: 1rem!important;
     flex: 1;
+    border-radius: 0.3rem;
 }
 
 .product{
@@ -116,11 +114,34 @@ p {
 }
 
 .prod_images{
-    width:100%;
-    height: 150px;
-    background: url(../images/intro.jpg) center no-repeat;
-    background-size:cover;
+    width:50%;
+    height: 50%;
     text-align:justify;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    color: #333;
+    text-shadow: none;
+    --bs-bg-opacity: 1;
+    background-color:rgb(224, 222, 222);
+    font-weight: 700!important;
+    border-color: rgb(224, 222, 222);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    display: block;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width:100%;
+    margin: auto;
 }
 
 :root {

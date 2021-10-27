@@ -1,11 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+from config import Config
+from routes import app_routes
+
 
 app = Flask(__name__)
+app.register_blueprint(app_routes)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
 
+with app.app_context():
+    from models import *
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+    db.create_all()
 
 
 if __name__ == "__main__":
